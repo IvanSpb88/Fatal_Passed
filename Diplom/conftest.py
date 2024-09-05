@@ -29,7 +29,7 @@ def setup(request):
 
 @allure.step("Открыть главную страницу Читай-Город")
 def open_url(driver):
-    driver.get("https://www.chitai-gorod.ru/")
+    driver.get("Config.UI_BASE_URL")
 
 
 @pytest.fixture
