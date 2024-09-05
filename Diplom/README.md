@@ -15,18 +15,18 @@
 
 ### Запуск тестов
 
-Предусловия: Указать токен в config.json
+Предусловия: Указать токен в файле .env
 
 1. <u>Обычный запуск тестов с помощью pytest:</u>  
-   `pytest .\api_tests\tests\api_tests.py`  
-   `pytest .\ui_tests\tests\ui_tests.py`
+   `pytest .\tests\api_tests.py`  
+   `pytest .\tests\ui_tests.py`
 
 2. <u>Для генерации и просмотра отчета Allure в браузере</u>
     - Установить Allure через npm:  
       `npm install -g allure-commandline`
     - Далее выполнить:
-        - `pytest .\api_tests\tests\api_tests.py --alluredir allure-results`
-        - `pytest .\api_tests\tests\ui_tests.py --alluredir allure-results`
+        - `pytest .\tests\api_tests.py --alluredir allure-results`
+        - `pytest .\tests\ui_tests.py --alluredir allure-results`
         - `allure serve ./allure-results`
     - После выполнения allure serve автоматически откроется браузер с отчетом. Если отчет пустой, значит в папке
       allure-results ничего не сгенерировалось.
@@ -41,4 +41,4 @@
     `your_test_file.py` — имя файла с тестами, которые вы хотите запустить.
 
 ---
-<br>Ссылка на репозиторий: https://github.com/IvanSpb88/Fatal_Passed.git
+<br>Ссылка на репозиторий: (https://github.com/IvanSpb88/Fatal_Passed)

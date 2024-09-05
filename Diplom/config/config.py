@@ -1,21 +1,15 @@
-import json
-from dataclasses import dataclass, field
-from typing import Dict
+from dotenv import dotenv_values
 
 
-@dataclass
 class Config:
-    ui_base_url: str = None
-    api_base_url: str = None
-    explicit_wait: int = None
-    headers: Dict[str, str] = field(default_factory=dict)
+    config = dotenv_values()
 
-    @classmethod
-    def load_from_json(cls):
-        # Загрузка данных из JSON файла
-        with open('config.json') as f:
-            data = json.load(f)
-        return cls(**data)
-
-    def get_authorization_header(self):
-        return self.headers.get("Authorization")
+    UI_BASE_URL = config['UI_BASE_URL']
+    API_BASE_URL = config['API_BASE_URL']
+    EXPLICIT_WAIT = config['EXPLICIT_WAIT']
+    AUTHORIZATION_TOKEN = config['AUTHORIZATION_TOKEN']
+    HEADERS = {
+        "Content-Type": "application/json",
+        "Accept": "*/*",
+        "Authorization": f"Bearer {AUTHORIZATION_TOKEN}"
+    }
