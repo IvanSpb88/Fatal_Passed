@@ -41,4 +41,4 @@
     `your_test_file.py` — имя файла с тестами, которые вы хотите запустить.
 
 ---
-<br>Ссылка на репозиторий: https://github.com/IvanSpb88/skypro_Diplom.git
+<br>Ссылка на репозиторий: https://github.com/IvanSpb88/Fatal_Passed.git
